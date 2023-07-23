@@ -1,3 +1,9 @@
+<?php
+require('include/db.php');
+
+$isLoggedIn = isset($_SESSION['isUserLoggedIn']) && $_SESSION['isUserLoggedIn'] === true;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +37,11 @@
         location.href = "#home";
       }
     };
+  </script>
+   <script>
+    if (window.location.href.indexOf("#home") === -1) {
+      window.location.href = window.location.href + "#home";
+    }
   </script>
   <style>
     body {
@@ -80,18 +91,23 @@
   <div class="background-image"></div>
   <!-- ======= Header ======= -->
   <header class="header" id="header" style="justify-content: center;">
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link active" href="#home">Home</a></li>
-        <li><a class="nav-link" href="#food">Food Waste</a></li>
-        <li><a class="nav-link" href="#about">About Us</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
-        <li><a href="components/register.html"><b class="navbar-link">Register</b></a></li>
-        <li><a href="components/login.html"><b class="navbar-link">Login</b></a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-  </header><!-- End Header -->
+  <nav id="navbar" class="navbar">
+    <ul>
+      <li><a class="nav-link active" href="#home">Home</a></li>
+      <li><a class="nav-link" href="#food">Food Waste</a></li>
+      <li><a class="nav-link" href="#about">About Us</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+
+      <?php if ($isLoggedIn) { ?>
+        <li><a href="components/logout.php"><b class="navbar-link">Logout</b></a></li>
+      <?php } else { ?>
+        <li><a href="components/register.php"><b class="navbar-link">Register</b></a></li>
+        <li><a href="components/login.php"><b class="navbar-link">Login</b></a></li>
+      <?php } ?>
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+  </nav><!-- .navbar -->
+</header><!-- End Header -->
   
 
   <section class="home" id="home">
