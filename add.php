@@ -15,7 +15,7 @@ $xdate = $_POST["xdate"];
 $contact = ""; // You can add a placeholder contact or leave it empty as needed
 
 // Insert data into the "waste" table
-$sql = "INSERT INTO waste (item, weight, wasteType, xdate, org_contact) 
+$sql = "INSERT INTO waste (item, weight, wasteType, xdate, contact) 
         VALUES ('$item', '$weight', '$wasteType', '$xdate', '$contact')";
 
 if ($conn->query($sql) === TRUE) {
