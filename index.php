@@ -225,7 +225,7 @@ $isLoggedIn = isset($_SESSION['isUserLoggedIn']) && $_SESSION['isUserLoggedIn'] 
         <div class="card-body p-0">
           <div class="col-md-6" style="margin-bottom: 10px;">
             <form id="search-form">
-              <input type="text" placeholder="Search term..." required>
+              <input type="text" id="searchTerm" placeholder="Search term..." required>
               <button type="submit">Search</button>
             </form>
           </div>
