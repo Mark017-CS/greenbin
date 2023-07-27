@@ -77,7 +77,7 @@ if (isset($_POST['register'])) {
     " class="hold-transition login-page">
   <div class="register-box">
     <div class="register-logo" style="font-weight: bold">
-      <a href="../index.php"><img src="../images/logo.png" alt="Green Bin" style="width: 50px; height: 60px" /><b
+      <a href="../index1.php"><img src="../images/logo.png" alt="Green Bin" style="width: 50px; height: 60px" /><b
           style="color: #17ef63">Green</b><b style="color: #fff">Bin</b></a>
     </div>
     <div class="card">

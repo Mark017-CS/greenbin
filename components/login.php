@@ -89,7 +89,7 @@ if (isset($_POST['login'])) {
   >
   <div class="login-box">
   <div class="register-logo" style="font-weight: bold">
-        <a href="../index.php"
+        <a href="../index1.php"
           ><img
           src="../images/logo.png"
           alt="Green Bin"
