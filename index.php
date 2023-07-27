@@ -299,12 +299,12 @@ $isLoggedIn = isset($_SESSION['isUserLoggedIn']) && $_SESSION['isUserLoggedIn'] 
       <div class="row food-container">
 
         <div class="card-body p-0">
-          <div class="col-md-6" style="margin-bottom: 10px;">
+          <!-- <div class="col-md-6" style="margin-bottom: 10px;">
             <form id="search-forms">
               <input type="text" id="searchTerms" placeholder="Search term..." required>
               <button type="submit">Search</button>
             </form>
-          </div>
+          </div> -->
           <table class="food-table" >
             <thead>
             <tr>

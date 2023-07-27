@@ -176,39 +176,3 @@ function searchData(searchTerm) {
     },
   });
 }
-
-
-$(document).ready(function () {
-  // Event listener for form submission
-  $("#search-form").submit(function (event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-    const searchTerm = $("#search-form input[type='text']").val();
-    searchData(searchTerm);
-  });
-
-  // Call the fetchData function initially to display data on page load
-  fetchData();
-
-  // Set an interval to fetch and update data every few seconds (e.g., every 5 seconds)
-  setInterval(fetchData, 5000); // Adjust the interval as per your preference
-});
-
-// Function to handle search
-function searchData(searchTerm) {
-  // Send the search request to the server using AJAX
-  $.ajax({
-    type: "GET",
-    url: "search_orgs.php",
-    data: {
-      search: searchTerm,
-    },
-    dataType: "json",
-    success: function (data) {
-      // Update the table with the search results
-      updateTable(data);
-    },
-    error: function (error) {
-      console.error("Error searching data:", error);
-    },
-  });
-}
