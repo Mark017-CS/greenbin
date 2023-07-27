@@ -32,7 +32,7 @@ $isLoggedIn = isset($_SESSION['isUserLoggedIn']) && $_SESSION['isUserLoggedIn'] 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <script src="script.js"></script>
+  <script src="script1.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     window.onload = function () {
@@ -240,14 +240,13 @@ $isLoggedIn = isset($_SESSION['isUserLoggedIn']) && $_SESSION['isUserLoggedIn'] 
                 <th>Type of Waste</th>
                 <th>Expiration Date</th>
                 <th>Organization Contact</th>
-                <th style="width: 40px">Action</th>
               </tr>
             </thead>
             <tbody>
             <tbody id="tableBody">
           </table>
         </div>
-        <form id="addEntryForm" role="form" action="index.php" method="POST" enctype="multipart/form-data"
+        <!-- <form id="addEntryForm" role="form" action="index.php" method="POST" enctype="multipart/form-data"
           style="margin-top: 25px;">
           <div class="card-body">
             <div class="form-group col-6">
@@ -283,7 +282,7 @@ $isLoggedIn = isset($_SESSION['isUserLoggedIn']) && $_SESSION['isUserLoggedIn'] 
             <button type="submit" id="submitBtn" onClick="addDataToTable();">Add</button>
           </div>
 
-        </form>
+        </form> -->
 
       </div>
 

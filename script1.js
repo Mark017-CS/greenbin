@@ -14,7 +14,7 @@ function updateTable(data) {
           <td>${row.wasteType}</td>
           <td>${row.xdate}</td>
           <td>${row.contact || ''}</td>
-          <td><button class="deleteBtn" data-id="${row.id}" onClick="deleteData(${row.id});" style="background-color: red;">Delete</button></td>
+          
         </tr>
       `;
       tbody.append(newRow);
